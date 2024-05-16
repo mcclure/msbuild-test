@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ApplicationIcon />
+		<StartupObject />
+	</PropertyGroup>
+
+	<Target Name="CustomScript" BeforeTargets="CoreCompile">
+		<Exec Command="$(MSBuildThisFileDirectory)/test.sh" />
+	</Target>
+</Project>
